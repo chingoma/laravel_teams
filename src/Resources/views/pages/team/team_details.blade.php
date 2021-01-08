@@ -414,7 +414,7 @@
                     text: "You are about to set a Member to REMOVE THIS MEMBER",
                     icon: "warning",
                     showCancelButton: true,
-                    confirmButtonText: "Yes, ROMEVE!"
+                    confirmButtonText: "Yes, ROMOVE!"
                 }).then(function (result) {
                     if (result.value) {
                         $.ajax({

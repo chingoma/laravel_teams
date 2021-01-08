@@ -198,15 +198,19 @@
                         </div>
                     </div>
                     <!--end::Body-->
-
+                    <div id="loadingProgressG" class="hidden">
+                        <div id="loadingProgressG_1" class="loadingProgressG"></div>
+                    </div>
                     <!--begin::Footer-->
                     <div class="card-footer align-items-center">
                         <!--begin::Compose-->
                         <textarea id="message" class="form-control border-0 p-0" rows="2" placeholder="Type a message"></textarea>
                         <div class="d-flex align-items-center justify-content-between mt-5">
                             <div class="mr-3">
-                                <a href="#" class="btn btn-clean btn-icon btn-md mr-1"><i class="flaticon2-photograph icon-lg"></i></a>
-                                <a href="#" class="btn btn-clean btn-icon btn-md"><i class="flaticon2-photo-camera  icon-lg"></i></a>
+                                <input type="file" id="imageInput"  onchange="sendFIle()" />
+                                <a href="#" class="btn btn-clean btn-icon btn-md mr-1" id="imageSelector">
+                                    <i class="flaticon2-files-and-folders icon-lg"></i>
+                                </a>
                             </div>
                             <div>
                                 <button onclick="sendMessage()" type="button" class="btn btn-primary btn-md text-uppercase font-weight-bold chat-send py-2 px-6">Send</button>
@@ -383,6 +387,37 @@
                     "                                    </div>\n" +
                     "                                </div>\n" +
                     "                                <!--end::Message Out-->";
+
+                if(message.type == "file"){
+
+                    let images = ["png", "jpg", "btm", "gif","web"];
+                    if(images.includes(message.fileExt)){
+                        content = "<!--begin::Message Out-->\n" +
+                            "                                <div class=\"d-flex flex-column mb-5 align-items-"+dir+"\">\n" +
+                            "                                    <div class=\"d-flex align-items-center\">\n" +
+                            "                                        <div>\n" +
+                            "                                            <span class=\"text-muted font-size-sm\">"+moment(Number(message.date)).fromNow()+"</span>\n" +
+                            "                                        </div>\n"+
+                            "                                    </div>\n" +
+                            "                                    <a target='_blank'  href='" + message.fileUrl + "' ><img src=" + message.fileUrl + " class=\"mt-2 rounded p-5  text-dark-50 font-weight-bold font-size-lg text-right max-w-400px "+col+"\"></a>\n" +
+                            "                                </div>\n" +
+                            "                                <!--end::Message Out-->";
+                    }else{
+                        content = "<!--begin::Message Out-->\n" +
+                            "                                <div class=\"d-flex flex-column mb-5 align-items-"+dir+"\">\n" +
+                            "                                    <div class=\"d-flex align-items-center\">\n" +
+                            "                                        <div>\n" +
+                            "                                            <span class=\"text-muted font-size-sm\">"+moment(Number(message.date)).fromNow()+"</span>\n" +
+                            "                                        </div>\n"+
+                            "                                    </div>\n" +
+                            "                                    <a style='padding: 5px; border: 1px grey solid' download='' target='_blank' href='" + message.fileUrl + "' >"+message.fileName+"</a>\n" +
+                            "                                </div>\n" +
+                            "                                <!--end::Message Out-->";
+                    }
+
+
+                }
+
                 container.append(content);
 
                 let objDiv = document.getElementById("messages");
@@ -446,5 +481,171 @@
         }
 
 
+    </script>
+    <style>
+        #chat-messages {
+            overflow: scroll;
+            height: 450px;
+        }
+
+        .hidden{
+            display: none;
+        }
+
+        #imageInput{
+            display: none;
+        }
+
+        #loadingProgressG{
+            width:100%;
+            height:3px;
+            overflow:hidden;
+            background-color:rgb(0,0,0);
+            margin:auto;
+            border-radius:3px;
+            -o-border-radius:3px;
+            -ms-border-radius:3px;
+            -webkit-border-radius:3px;
+            -moz-border-radius:3px;
+        }
+
+        .loadingProgressG{
+            background-color:rgb(255,255,255);
+            margin-top:0;
+            margin-left:-90px;
+            animation-name:bounce_loadingProgressG;
+            -o-animation-name:bounce_loadingProgressG;
+            -ms-animation-name:bounce_loadingProgressG;
+            -webkit-animation-name:bounce_loadingProgressG;
+            -moz-animation-name:bounce_loadingProgressG;
+            animation-duration:1s;
+            -o-animation-duration:1s;
+            -ms-animation-duration:1s;
+            -webkit-animation-duration:1s;
+            -moz-animation-duration:1s;
+            animation-iteration-count:infinite;
+            -o-animation-iteration-count:infinite;
+            -ms-animation-iteration-count:infinite;
+            -webkit-animation-iteration-count:infinite;
+            -moz-animation-iteration-count:infinite;
+            animation-timing-function:linear;
+            -o-animation-timing-function:linear;
+            -ms-animation-timing-function:linear;
+            -webkit-animation-timing-function:linear;
+            -moz-animation-timing-function:linear;
+            width:90px;
+            height:7px;
+        }
+
+        @keyframes bounce_loadingProgressG{
+            0%{
+                margin-left:-90px;
+            }
+
+            100%{
+                margin-left:90px;
+            }
+        }
+
+        @-o-keyframes bounce_loadingProgressG{
+            0%{
+                margin-left:-90px;
+            }
+
+            100%{
+                margin-left:90px;
+            }
+        }
+
+        @-ms-keyframes bounce_loadingProgressG{
+            0%{
+                margin-left:-90px;
+            }
+
+            100%{
+                margin-left:90px;
+            }
+        }
+
+        @-webkit-keyframes bounce_loadingProgressG{
+            0%{
+                margin-left:-90px;
+            }
+
+            100%{
+                margin-left:90px;
+            }
+        }
+
+        @-moz-keyframes bounce_loadingProgressG{
+            0%{
+                margin-left:-90px;
+            }
+
+            100%{
+                margin-left:90px;
+            }
+        }
+
+    </style>
+
+    <script>
+        var imgBtn = document.getElementById('imageSelector');
+        var fileInp = document.getElementById('imageInput');
+
+        imgBtn.addEventListener('click', function() {
+            fileInp.click();
+        })
+
+        function sendFIle(){
+            let loadingIndicator = document.getElementById('loadingProgressG');
+            loadingIndicator.classList.remove('hidden');
+
+            let imageFile = new FormData();
+            imageFile.append('file', document.getElementById('imageInput').files[0]);
+
+            if(imageFile == null){
+                console.log('image does not exist');
+                return;
+            }
+
+            axios.post(URL + '/send-file', imageFile).then((res) => {
+
+                let filePath = JSON.parse(JSON.stringify(res.data.filePath));
+                let fileExt = JSON.parse(JSON.stringify(res.data.fileExt));
+                let fileName = JSON.parse(JSON.stringify(res.data.fileName));
+
+                let currentDate = new Date().getTime().toString();
+
+                let ref = firebaseDatabase.ref('team_chats/team_{{$team['id']}}');
+
+                let key = ref.push().getKey();
+
+                ref.child(key).set({
+                    fileExt: fileExt,
+                    fileUrl: filePath,
+                    fileName: fileName,
+                    team:"{{$team['id']}}",
+                    name: "{{$user->first_name.' '.$user->last_name}}",
+                    message: "",
+                    seen: true,
+                    sender: "{{$user->id}}",
+                    delivered: true,
+                    type: "file",
+                    date: currentDate,
+                });
+
+                loadingIndicator.classList.add('hidden');
+
+                document.getElementById('imageInput').value = null;
+            }).catch((error) => {
+                alert(error);
+                loadingIndicator.removeClass("hidden");
+                loadingIndicator.classList.add('hidden');
+                console.log(error);
+                document.getElementById('imageInput').value = null;
+
+            });
+        }
     </script>
 @endsection

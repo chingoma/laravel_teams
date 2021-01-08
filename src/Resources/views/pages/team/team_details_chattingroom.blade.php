@@ -101,62 +101,7 @@
                                 <h3 class="card-title"><b>{{$member['first_name'].' '.$member['last_name']}} </b> </h3>
                             </div>
                         </div>
-{{--                        <div class="text-right flex-grow-1">--}}
-{{--                            <!--begin::Dropdown Menu-->--}}
-{{--                            <div class="dropdown dropdown-inline">--}}
-{{--                                <button type="button" class="btn btn-clean btn-sm btn-icon btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-{{--                            <span class="svg-icon svg-icon-lg"><!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Add-user.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">--}}
-{{--    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">--}}
-{{--        <polygon points="0 0 24 0 24 24 0 24"></polygon>--}}
-{{--        <path d="M18,8 L16,8 C15.4477153,8 15,7.55228475 15,7 C15,6.44771525 15.4477153,6 16,6 L18,6 L18,4 C18,3.44771525 18.4477153,3 19,3 C19.5522847,3 20,3.44771525 20,4 L20,6 L22,6 C22.5522847,6 23,6.44771525 23,7 C23,7.55228475 22.5522847,8 22,8 L20,8 L20,10 C20,10.5522847 19.5522847,11 19,11 C18.4477153,11 18,10.5522847 18,10 L18,8 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>--}}
-{{--        <path d="M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero"></path>--}}
-{{--    </g>--}}
-{{--</svg><!--end::Svg Icon--></span>                        </button>--}}
-{{--                                <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-md">--}}
-{{--                                    <!--begin::Navigation-->--}}
-{{--                                    <ul class="navi navi-hover py-5">--}}
-{{--                                        <li class="navi-item">--}}
-{{--                                            <a href="#" class="navi-link">--}}
-{{--                                                <span class="navi-icon"><i class="flaticon2-drop"></i></span>--}}
-{{--                                                <span class="navi-text">Mute Notification Sounds</span>--}}
-{{--                                            </a>--}}
-{{--                                        </li>--}}
-{{--                                        <li class="navi-item">--}}
-{{--                                            <a href="#" class="navi-link">--}}
-{{--                                                <span class="navi-icon"><i class="flaticon2-list-3"></i></span>--}}
-{{--                                                <span class="navi-text">Mute Chat Sounds</span>--}}
-{{--                                            </a>--}}
-{{--                                        </li>--}}
 
-{{--                                        <li class="navi-separator my-3"></li>--}}
-
-{{--                                        <li class="navi-item">--}}
-{{--                                            <a href="#" class="navi-link">--}}
-{{--                                                <span class="navi-icon"><i class="flaticon2-magnifier-tool"></i></span>--}}
-{{--                                                <span class="navi-text">Help</span>--}}
-{{--                                            </a>--}}
-{{--                                        </li>--}}
-{{--                                        <li class="navi-item">--}}
-{{--                                            <a href="#" class="navi-link">--}}
-{{--                                                <span class="navi-icon"><i class="flaticon2-bell-2"></i></span>--}}
-{{--                                                <span class="navi-text">Privacy</span>--}}
-{{--                                                <span class="navi-link-badge">--}}
-{{--                                                    <span class="label label-light-danger label-rounded font-weight-bold">5</span>--}}
-{{--                                                </span>--}}
-{{--                                            </a>--}}
-{{--                                        </li>--}}
-{{--                                        <li class="navi-item">--}}
-{{--                                            <a href="javascript:attemptLogout();" class="navi-link">--}}
-{{--                                                <span class="navi-icon"><i class="flaticon2-lock"></i></span>--}}
-{{--                                                <span class="navi-text">Go Offline</span>--}}
-{{--                                            </a>--}}
-{{--                                        </li>--}}
-{{--                                    </ul>--}}
-{{--                                    <!--end::Navigation-->--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <!--end::Dropdown Menu-->--}}
-{{--                        </div>--}}
                     </div>
                     <!--end::Header-->
 
@@ -165,13 +110,12 @@
                         <!--begin::Scroll-->
                         <div id="messages" class="messages scroll scroll-pull" style="height: 344px; overflow-y: scroll;"  data-mobile-height="350" >
                             <!--begin::Messages-->
-
-                            <!--end::Messages-->
-                            <!--end::Scroll-->
                         </div>
                     </div>
                     <!--end::Body-->
-
+                    <div id="loadingProgressG" class="hidden">
+                        <div id="loadingProgressG_1" class="loadingProgressG"></div>
+                    </div>
                     <!--begin::Footer-->
                     <span class="text-muted" style="padding-left: 10px" id="typingState"></span>
                     <div class="card-footer align-items-center">
@@ -179,8 +123,10 @@
                         <textarea onkeydown="sendTypingStatus()" onkeyup="removeTypingStatus()" id="message" class="form-control border-0 p-0" rows="2" placeholder="Type a message"></textarea>
                         <div class="d-flex align-items-center justify-content-between mt-5">
                             <div class="mr-3">
-                                <a href="#" class="btn btn-clean btn-icon btn-md mr-1"><i class="flaticon2-photograph icon-lg"></i></a>
-                                <a href="#" class="btn btn-clean btn-icon btn-md"><i class="flaticon2-photo-camera  icon-lg"></i></a>
+                                <input type="file" id="imageInput"  onchange="sendFIle()" />
+                                <a href="#" class="btn btn-clean btn-icon btn-md mr-1" id="imageSelector">
+                                    <i class="flaticon2-files-and-folders icon-lg"></i>
+                                </a>
                             </div>
                             <div>
                                 <button onclick="sendMessage()" type="button" class="btn btn-primary btn-md text-uppercase font-weight-bold chat-send py-2 px-6">Send</button>
@@ -330,7 +276,9 @@
             }
 
             $( function(){
+
                 let container = $('div.messages');
+
                 let content = "<!--begin::Message Out-->\n" +
                     "                                <div class=\"d-flex flex-column mb-5 align-items-"+dir+"\">\n" +
                     "                                    <div class=\"d-flex align-items-center\">\n" +
@@ -342,6 +290,40 @@
                     "                                    </div>\n" +
                     "                                </div>\n" +
                     "                                <!--end::Message Out-->";
+
+                if(message.type == "file"){
+
+                    let images = ["png", "jpg", "btm", "gif","web"];
+                    if(images.includes(message.fileExt)){
+                        content = "<!--begin::Message Out-->\n" +
+                            "                                <div class=\"d-flex flex-column mb-5 align-items-"+dir+"\">\n" +
+                            "                                    <div class=\"d-flex align-items-center\">\n" +
+                            "                                        <div>\n" +
+                            "                                            <span class=\"text-muted font-size-sm\">"+moment(Number(message.date)).fromNow()+"</span>\n" +
+                            "                                        </div>\n"+
+                            "                                    </div>\n" +
+                            "                                    <a target='_blank'  href='" + message.fileUrl + "' ><img src=" + message.fileUrl + " class=\"mt-2 rounded p-5  text-dark-50 font-weight-bold font-size-lg text-right max-w-400px "+col+"\"></a>\n" +
+                            "                                </div>\n" +
+                            "                                <!--end::Message Out-->";
+                    }else{
+                        content = "<!--begin::Message Out-->\n" +
+                            "                                <div class=\"d-flex flex-column mb-5 align-items-"+dir+"\">\n" +
+                            "                                    <div class=\"d-flex align-items-center\">\n" +
+                            "                                        <div>\n" +
+                            "                                            <span class=\"text-muted font-size-sm\">"+moment(Number(message.date)).fromNow()+"</span>\n" +
+                            "                                        </div>\n"+
+                            "                                    </div>\n" +
+                            "                                    <a style='padding: 5px; border: 1px grey solid' download='' target='_blank' href='" + message.fileUrl + "' >"+message.fileName+"</a>\n" +
+                            "                                </div>\n" +
+                            "                                <!--end::Message Out-->";
+                    }
+
+
+                }
+
+
+
+
                 container.append(content);
 
                 let objDiv = document.getElementById("messages");
@@ -459,19 +441,6 @@
 
                 addMessage(snapshot.val());
 
-                {{--if(snapshot.val().from == "member_{{$user->id}}"){--}}
-
-                {{--    addMessageOut(snapshot.val());--}}
-
-                {{--} else {--}}
-
-                {{--        ref.child(snapshot.key).update({--}}
-                {{--            seen: true,--}}
-                {{--            delivered: true--}}
-                {{--        })--}}
-
-                {{--    addMessageIn(snapshot.val());--}}
-                {{--}--}}
             })
         }
 
@@ -523,4 +492,238 @@
         }
 
     </script>
+
+    <script>
+        function openImageModal(source){
+            let image = document.getElementById('imgToShow')
+            image.src = source;
+            $('#imgModal').modal('show')
+        }
+    </script>
+    <style>
+        #chat-messages {
+            overflow: scroll;
+            height: 450px;
+        }
+
+        .hidden{
+            display: none;
+        }
+
+        #imageInput{
+            display: none;
+        }
+
+        #loadingProgressG{
+            width:100%;
+            height:3px;
+            overflow:hidden;
+            background-color:rgb(0,0,0);
+            margin:auto;
+            border-radius:3px;
+            -o-border-radius:3px;
+            -ms-border-radius:3px;
+            -webkit-border-radius:3px;
+            -moz-border-radius:3px;
+        }
+
+        .loadingProgressG{
+            background-color:rgb(255,255,255);
+            margin-top:0;
+            margin-left:-90px;
+            animation-name:bounce_loadingProgressG;
+            -o-animation-name:bounce_loadingProgressG;
+            -ms-animation-name:bounce_loadingProgressG;
+            -webkit-animation-name:bounce_loadingProgressG;
+            -moz-animation-name:bounce_loadingProgressG;
+            animation-duration:1s;
+            -o-animation-duration:1s;
+            -ms-animation-duration:1s;
+            -webkit-animation-duration:1s;
+            -moz-animation-duration:1s;
+            animation-iteration-count:infinite;
+            -o-animation-iteration-count:infinite;
+            -ms-animation-iteration-count:infinite;
+            -webkit-animation-iteration-count:infinite;
+            -moz-animation-iteration-count:infinite;
+            animation-timing-function:linear;
+            -o-animation-timing-function:linear;
+            -ms-animation-timing-function:linear;
+            -webkit-animation-timing-function:linear;
+            -moz-animation-timing-function:linear;
+            width:90px;
+            height:7px;
+        }
+
+        @keyframes bounce_loadingProgressG{
+            0%{
+                margin-left:-90px;
+            }
+
+            100%{
+                margin-left:90px;
+            }
+        }
+
+        @-o-keyframes bounce_loadingProgressG{
+            0%{
+                margin-left:-90px;
+            }
+
+            100%{
+                margin-left:90px;
+            }
+        }
+
+        @-ms-keyframes bounce_loadingProgressG{
+            0%{
+                margin-left:-90px;
+            }
+
+            100%{
+                margin-left:90px;
+            }
+        }
+
+        @-webkit-keyframes bounce_loadingProgressG{
+            0%{
+                margin-left:-90px;
+            }
+
+            100%{
+                margin-left:90px;
+            }
+        }
+
+        @-moz-keyframes bounce_loadingProgressG{
+            0%{
+                margin-left:-90px;
+            }
+
+            100%{
+                margin-left:90px;
+            }
+        }
+
+    </style>
+
+    <script>
+        var enterPressed = function() {
+            $('#message').keyup(function(event) {
+                if(event.which == 13) {
+                    sendMessage();
+                }
+            });
+        };
+
+        enterPressed();
+    </script>
+
+    <script>
+        var imgBtn = document.getElementById('imageSelector');
+        var fileInp = document.getElementById('imageInput');
+
+        imgBtn.addEventListener('click', function() {
+            fileInp.click();
+        })
+
+        function sendFIle(){
+            let loadingIndicator = document.getElementById('loadingProgressG');
+            loadingIndicator.classList.remove('hidden');
+
+            let imageFile = new FormData();
+            imageFile.append('file', document.getElementById('imageInput').files[0]);
+
+            if(imageFile == null){
+                console.log('image does not exist');
+                return;
+            }
+
+            axios.post(URL + '/send-file', imageFile).then((res) => {
+
+                let filePath = JSON.parse(JSON.stringify(res.data.filePath));
+                let fileExt = JSON.parse(JSON.stringify(res.data.fileExt));
+                let fileName = JSON.parse(JSON.stringify(res.data.fileName));
+                let recieverToken;
+                let avatarUrl;
+                let name;
+
+                let config = {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'key=AAAAl1NrEXs:APA91bHKnVkbGrNHDhp5_rXyCuTChvA0tP1kAnjnr03lRneVa2--FEaNL-oG8wCNV_faLcq1jsfSdoVZ-0s5DSBBuAPDI-9hOSs2UZSSAp77UMruzmA6Eg1Dxv58bTVCNzpJtkzGsMuA'
+                    }
+                }
+
+                let currentDate = new Date().getTime().toString();
+
+                let ref = firebaseDatabase.ref("member_chats/member_{{$user->id}}/member_{{$member->id}}");
+
+                let key = ref.push().getKey();
+
+                ref.child(key).set({
+                    fileExt: fileExt,
+                    fileUrl: filePath,
+                    fileName: fileName,
+                    team:"{{$team['id']}}",
+                    name:"{{$user->name}}",
+                    message: "",
+                    seen: true,
+                    delivered: true,
+                    to: "member_{{$member->id}}",
+                    from: "member_{{$user->id}}",
+                    type: "file",
+                    date: currentDate,
+                });
+
+                let ref2 = firebaseDatabase.ref("member_chats/member_{{$member->id}}/member_{{$user->id}}");
+
+                ref2.child(key).set({
+                    fileExt: fileExt,
+                    fileUrl: filePath,
+                    fileName: fileName,
+                    team:"{{$team['id']}}",
+                    name:"{{$user->name}}",
+                    message: "",
+                    seen: false,
+                    delivered: false,
+                    to: "member_{{$member->id}}",
+                    from: "member_{{$user->id}}",
+                    type: "file",
+                    date: currentDate,
+                });
+
+                let data = {
+                    "to": recieverToken,
+                    "data": {
+                        "sender": this.currentUserId,
+                        "title": name,
+                        "imageUrl": filePath,
+                        "body": "",
+                        "receiver": this.recieverId,
+                        "category": "chats",
+                        "bigBody": "",
+                        "messageKey": key,
+                        "token": recieverToken,
+                        "senderImageUrl": avatarUrl
+                    }
+                }
+
+                axios.post('https://fcm.googleapis.com/fcm/send', data, config);
+
+                loadingIndicator.classList.add('hidden');
+
+                document.getElementById('imageInput').value = null;
+            }).catch((error) => {
+                alert(error);
+                loadingIndicator.removeClass("hidden");
+                loadingIndicator.classList.add('hidden');
+                console.log(error);
+                document.getElementById('imageInput').value = null;
+
+            });
+        }
+    </script>
+
+
 @endsection

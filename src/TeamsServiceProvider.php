@@ -23,6 +23,7 @@ class TeamsServiceProvider extends ServiceProvider
          $this->loadViewsFrom(__DIR__.'/Resources/views', 'teams');
          $this->loadMigrationsFrom(__DIR__.'/Database/Migrations');
          $this->loadRoutesFrom(__DIR__.'/Routes/routes.php');
+         $this->loadRoutesFrom(__DIR__.'/Routes/api.php');
 
         if ($this->app->runningInConsole()) {
 

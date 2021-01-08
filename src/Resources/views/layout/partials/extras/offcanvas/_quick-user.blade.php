@@ -14,7 +14,6 @@
 		</a>
 	</div>
 
-	 Content
     <div class="offcanvas-content pr-5 mr-n5">
 		 Header
         <div class="d-flex align-items-center mt-5">
@@ -49,10 +48,8 @@
             </div>
         </div>
 
-		 Separator
 		<div class="separator separator-dashed mt-8 mb-5"></div>
 
-		 Nav
 		<div class="navi navi-spacer-x-0 p-0">
 		     Item
 		    <a href="#" class="navi-item">

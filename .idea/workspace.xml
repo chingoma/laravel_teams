@@ -5,9 +5,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b5188d4-26da-4290-9ea5-615baac7ea5e" name="Default Changelist" comment="1.&#9;After creating team go to team details&#10;&#10;2. On invitation freelancer should see who has invited &#10;3.&#9;Invitor details &#10;&#10;4. After accepting to be on the team it should redirect me to the teams section.&#10;&#10;5. On decline should say reason why i have not accepted&#10;&#10;&#10;6. On Group chatting chats alignment.&#10;&#10;7. On group chatting profile name template does not change.&#10;&#10;8. On invitation should UI / UX &#10;Is the whole message displayed ?&#10;9. Accept and Decline should be buttons.">
+    <list default="true" id="9b5188d4-26da-4290-9ea5-615baac7ea5e" name="Default Changelist" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/src/Http/Controllers/MessagingController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/views/pages/tasks/progresstasks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/pages/tasks/progresstasks.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Http/Controllers/ToolsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Http/Controllers/ToolsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Providers/SeedServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Providers/SeedServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/views/layout/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/layout/default.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/views/layout/partials/extras/_topbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/layout/partials/extras/_topbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/views/layout/partials/extras/dropdown/_user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/layout/partials/extras/dropdown/_user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/views/layout/partials/extras/offcanvas/_quick-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/layout/partials/extras/offcanvas/_quick-user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_chatroom.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_chatroom.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_chattingroom.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_chattingroom.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_task_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_task_details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_tasks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_tasks.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routes/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TeamsServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TeamsServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +175,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Resources/views/pages/team" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Http/Controllers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -174,11 +188,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PROJECTS\TEAMS\src\Http\Controllers" />
       <recent name="D:\PROJECTS\teams\src\Resources\views\pages\team" />
       <recent name="D:\PROJECTS\teams\src\Database\Migrations" />
       <recent name="D:\PROJECTS\teams\src\Console" />
       <recent name="D:\PROJECTS\teams\src\Resources\views\pages\tools" />
-      <recent name="D:\PROJECTS\teams\src\Models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PROJECTS\teams\src\Resources\views\pages\tasks" />
@@ -263,7 +277,7 @@
       <workItem from="1605632966829" duration="3289000" />
       <workItem from="1605654906946" duration="188000" />
       <workItem from="1606810071534" duration="1662000" />
-      <workItem from="1610093298609" duration="1533000" />
+      <workItem from="1610093298609" duration="20571000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize">
       <created>1601038109673</created>
@@ -468,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605635831082</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Initial Commit">
+      <created>1610095709990</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1610095709990</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,6 +531,7 @@
     <MESSAGE value="Artisan command seeding" />
     <MESSAGE value="Project Initiation" />
     <MESSAGE value="1.&#9;After creating team go to team details&#10;&#10;2. On invitation freelancer should see who has invited &#10;3.&#9;Invitor details &#10;&#10;4. After accepting to be on the team it should redirect me to the teams section.&#10;&#10;5. On decline should say reason why i have not accepted&#10;&#10;&#10;6. On Group chatting chats alignment.&#10;&#10;7. On group chatting profile name template does not change.&#10;&#10;8. On invitation should UI / UX &#10;Is the whole message displayed ?&#10;9. Accept and Decline should be buttons." />
-    <option name="LAST_COMMIT_MESSAGE" value="1.&#9;After creating team go to team details&#10;&#10;2. On invitation freelancer should see who has invited &#10;3.&#9;Invitor details &#10;&#10;4. After accepting to be on the team it should redirect me to the teams section.&#10;&#10;5. On decline should say reason why i have not accepted&#10;&#10;&#10;6. On Group chatting chats alignment.&#10;&#10;7. On group chatting profile name template does not change.&#10;&#10;8. On invitation should UI / UX &#10;Is the whole message displayed ?&#10;9. Accept and Decline should be buttons." />
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
 </project>

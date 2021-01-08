@@ -50,7 +50,7 @@
         @foreach(config('lm_team_layouts.resources.js') as $script)
             <script src="{{ asset($script) }}" type="text/javascript"></script>
         @endforeach
-
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -66,6 +66,9 @@
         <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
         <script src="{{asset('vendor/teams/js/init-firebase.js')}}"></script>
         <script>
+
+            const URL = 'https://nasi.lockminds.com';
+            const avatarImage = 'https://store.playstation.com/store/api/chihiro/00_09_000/container/HK/en/999/HP9000-CUSA00912_00-PREMIUMAVATAR001/1591329771000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000';
 
             jQuery(document).ready(function() {
 

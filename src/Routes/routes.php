@@ -11,8 +11,12 @@
 |
 */
 
+use Lockminds\Teams\Http\Controllers\MessagingController;
 use Lockminds\Teams\Http\Controllers\Tasks\TasksController;
 use Lockminds\Teams\Http\Controllers\ToolsController;
+
+Route::post('send-file', [MessagingController::class,'sendFile'])->name("send-file");
+Route::post('send-group-file', 'Dashboard\GroupController@sendFileInChat');
 
 Route::get('quick_search', 'TaskmanagerController@quick_search')->name("quick-search");
 

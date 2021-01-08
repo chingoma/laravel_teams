@@ -16,7 +16,6 @@ class SeedServiceProvider extends ServiceProvider
 {
     protected $seeds_path = '/../Database/Seeders';
 
-
     /**
      * Bootstrap services.
      *

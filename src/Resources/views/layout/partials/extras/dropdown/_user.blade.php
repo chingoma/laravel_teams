@@ -3,7 +3,8 @@
     <div class="d-flex align-items-center p-8 rounded-top">
         {{-- Symbol --}}
         <div class="symbol symbol-md bg-light-primary mr-3 flex-shrink-0">
-            <img src="{{ asset('media/users/300_21.jpg') }}" alt=""/>
+            <!-- TODO: display profile photo -->
+{{--            <img src="{{ asset('media/users/300_21.jpg') }}" alt=""/>--}}
         </div>
 
         {{-- Text --}}
@@ -28,6 +29,9 @@
 {{-- Nav --}}
 <div class="navi navi-spacer-x-0 pt-5">
     {{-- Item --}}
+
+    <!-- TODO set link to go to profile -->
+
     <a href="#" class="navi-item px-8">
         <div class="navi-link">
             <div class="navi-icon mr-2">
@@ -46,6 +50,5 @@
     <div class="navi-separator mt-3"></div>
     <div class="navi-footer  px-8 py-5">
         <a href="{{route("user.logout")}}" target="_blank" class="btn btn-light-primary font-weight-bold">Logout</a>
-        <a href="#" target="_blank" class="btn btn-clean font-weight-bold">Upgrade Plan</a>
     </div>
 </div>

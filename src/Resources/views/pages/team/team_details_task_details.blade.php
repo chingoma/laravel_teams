@@ -1,7 +1,7 @@
 @php
     switch (strtolower($task['task_status'])){
             case "new":
-                $colorClass = "danger";
+                $colorClass = "warning";
                 break;
             case "on progress":
             $colorClass = "primary";
