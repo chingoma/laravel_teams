@@ -5,25 +5,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b5188d4-26da-4290-9ea5-615baac7ea5e" name="Default Changelist" comment="Project Initiation">
-      <change afterPath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_members_invitations.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_members_invite.blade.php" afterDir="false" />
+    <list default="true" id="9b5188d4-26da-4290-9ea5-615baac7ea5e" name="Default Changelist" comment="1.&#9;After creating team go to team details&#10;&#10;2. On invitation freelancer should see who has invited &#10;3.&#9;Invitor details &#10;&#10;4. After accepting to be on the team it should redirect me to the teams section.&#10;&#10;5. On decline should say reason why i have not accepted&#10;&#10;&#10;6. On Group chatting chats alignment.&#10;&#10;7. On group chatting profile name template does not change.&#10;&#10;8. On invitation should UI / UX &#10;Is the whole message displayed ?&#10;9. Accept and Decline should be buttons.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/Migrations/2020_09_15_095958_teams_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/Migrations/2020_09_15_095958_teams_tables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Http/Controllers/Team/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Http/Controllers/Team/TeamController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Http/Controllers/ToolsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Http/Controllers/ToolsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/views/layout/base/_aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/layout/base/_aside.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/views/pages/tasks/completestasks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/pages/tasks/completestasks.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/views/pages/tasks/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/pages/tasks/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/views/pages/tasks/newtasks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/pages/tasks/newtasks.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Resources/views/pages/tasks/progresstasks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/pages/tasks/progresstasks.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_chatroom.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_chatroom.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_chattingroom.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_chattingroom.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_members.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_members.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_menus.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/pages/team/team_details_menus.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/views/pages/tools/invitations.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/views/pages/tools/invitations.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Teams.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Teams.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,6 +159,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Resources/views/pages/team" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -208,6 +193,9 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9b5188d4-26da-4290-9ea5-615baac7ea5e" name="Default Changelist" comment="" />
@@ -272,7 +260,10 @@
       <workItem from="1605562593276" duration="12590000" />
       <workItem from="1605623201321" duration="3636000" />
       <workItem from="1605626911725" duration="5645000" />
-      <workItem from="1605632966829" duration="2741000" />
+      <workItem from="1605632966829" duration="3289000" />
+      <workItem from="1605654906946" duration="188000" />
+      <workItem from="1606810071534" duration="1662000" />
+      <workItem from="1610093298609" duration="1533000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize">
       <created>1601038109673</created>
@@ -470,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604001484564</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="1.&#9;After creating team go to team details&#10;&#10;2. On invitation freelancer should see who has invited &#10;3.&#9;Invitor details &#10;&#10;4. After accepting to be on the team it should redirect me to the teams section.&#10;&#10;5. On decline should say reason why i have not accepted&#10;&#10;&#10;6. On Group chatting chats alignment.&#10;&#10;7. On group chatting profile name template does not change.&#10;&#10;8. On invitation should UI / UX &#10;Is the whole message displayed ?&#10;9. Accept and Decline should be buttons.">
+      <created>1605635831082</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1605635831082</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,88 +509,7 @@
     <MESSAGE value="Artisan command extended 2" />
     <MESSAGE value="Artisan command seeding" />
     <MESSAGE value="Project Initiation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project Initiation" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="361" y="75" key="#Deployment" timestamp="1605593993692">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="361" y="75" key="#Deployment/0.0.1536.834@0.0.1536.834" timestamp="1605593993692" />
-    <state x="444" y="98" key="#Options" timestamp="1605541859139">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="444" y="98" key="#Options/0.0.1536.834@0.0.1536.834" timestamp="1605541859139" />
-    <state x="535" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601046101086">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="535" y="219" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1601046101086" />
-    <state x="449" y="153" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1603099535428">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="449" y="153" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.834@0.0.1536.834" timestamp="1603099535428" />
-    <state x="76" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603808657706">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="76" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1603808657706" />
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603816612076">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1603816612076" />
-    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605617076351">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1605617076351" />
-    <state x="545" y="329" key="ComposerInitDialogKey" timestamp="1601037629805">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="545" y="329" key="ComposerInitDialogKey/0.0.1536.834@0.0.1536.834" timestamp="1601037629805" />
-    <state x="434" y="156" key="FileChooserDialogImpl" timestamp="1605616626251">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="434" y="156" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1605616626251" />
-    <state x="147" y="65" key="MergeDialog" timestamp="1605594030167">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="147" y="65" key="MergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1605594030167" />
-    <state x="594" y="140" key="NewPhpClassDialog" timestamp="1603824666824">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="594" y="140" key="NewPhpClassDialog/0.0.1536.834@0.0.1536.834" timestamp="1603824666824" />
-    <state x="604" y="340" key="NewPhpFileDialog" timestamp="1602694816295">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="604" y="340" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1602694816295" />
-    <state x="277" y="62" key="SettingsEditor" timestamp="1603798141691">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="277" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1603798141691" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1604001515739">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1604001515739" />
-    <state x="93" y="93" width="1350" height="648" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1604001086058">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="93" y="93" width="1350" height="648" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1604001086058" />
-    <state x="642" y="151" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1604001421621">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="642" y="151" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.834@0.0.1536.834" timestamp="1604001421621" />
-    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601038306073">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1601038306073" />
-    <state x="654" y="147" key="ftp.server.browser" timestamp="1605593992093">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="654" y="147" key="ftp.server.browser/0.0.1536.834@0.0.1536.834" timestamp="1605593992093" />
-    <state x="570" y="323" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1604001345666">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="570" y="323" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.834@0.0.1536.834" timestamp="1604001345666" />
-    <state x="638" y="309" key="publish.login" timestamp="1605593265028">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="638" y="309" key="publish.login/0.0.1536.834@0.0.1536.834" timestamp="1605593265028" />
+    <MESSAGE value="1.&#9;After creating team go to team details&#10;&#10;2. On invitation freelancer should see who has invited &#10;3.&#9;Invitor details &#10;&#10;4. After accepting to be on the team it should redirect me to the teams section.&#10;&#10;5. On decline should say reason why i have not accepted&#10;&#10;&#10;6. On Group chatting chats alignment.&#10;&#10;7. On group chatting profile name template does not change.&#10;&#10;8. On invitation should UI / UX &#10;Is the whole message displayed ?&#10;9. Accept and Decline should be buttons." />
+    <option name="LAST_COMMIT_MESSAGE" value="1.&#9;After creating team go to team details&#10;&#10;2. On invitation freelancer should see who has invited &#10;3.&#9;Invitor details &#10;&#10;4. After accepting to be on the team it should redirect me to the teams section.&#10;&#10;5. On decline should say reason why i have not accepted&#10;&#10;&#10;6. On Group chatting chats alignment.&#10;&#10;7. On group chatting profile name template does not change.&#10;&#10;8. On invitation should UI / UX &#10;Is the whole message displayed ?&#10;9. Accept and Decline should be buttons." />
   </component>
 </project>

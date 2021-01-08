@@ -56,7 +56,7 @@
                                     <!--end::Header-->
 
                                     <!--begin::Body-->
-                                    <div class="card-body p-0">
+                                     <div class="card-body p-0">
                                         <!--begin::Responsive container-->
                                         <div class="table-responsive">
 
