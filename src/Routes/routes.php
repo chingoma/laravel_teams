@@ -20,7 +20,7 @@ Route::post('send-group-file', 'Dashboard\GroupController@sendFileInChat');
 
 Route::get('quick_search', 'TaskmanagerController@quick_search')->name("quick-search");
 
-Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => ['auth']], function () {
 
     Route::prefix('lmmessages')->group(function () {
         Route::any('/', function (){

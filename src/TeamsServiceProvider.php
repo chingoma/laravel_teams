@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Lockminds\Teams\Console\InstallLockmindsTeams;
 use Lockminds\Teams\Console\InstallMinimalLockmindsTeams;
 use Lockminds\Teams\Console\UpdateLockmindsTeams;
+use Lockminds\Teams\Providers\RouteServiceProvider;
 use Lockminds\Teams\Providers\SeedServiceProvider;
 use Spatie\Permission\PermissionServiceProvider;
 
@@ -80,6 +81,7 @@ class TeamsServiceProvider extends ServiceProvider
         $this->app->register(PermissionServiceProvider::class);
         $this->app->register(\Kreait\Laravel\Firebase\ServiceProvider::class);
         $this->app->register(SeedServiceProvider::class);
+        $this->app->register(RouteServiceProvider::class);
 
         // Automatically apply the package configuration
         $this->mergeConfigFrom(__DIR__.'/../config/lm_team_config.php', 'teams');
