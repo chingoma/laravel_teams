@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": "^7.3|^7.4|^8.0",
+        "php": "^7.3|^7.4.14|^8.0.0",
         "fightbulc/moment": "^1.32",
         "illuminate/support": "^8.0.0",
         "kreait/laravel-firebase": "^2.4",
